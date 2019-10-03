@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
 
   def index
     @all_ratings = Movie.ratings
-    # set up the sessions hash
+    # setting up the sessions hash
     session[:ratings] ||= @all_ratings
     session[:sort] ||= 'id'
     @title_hilited = "hilite" if params[:sort] == 'title'
